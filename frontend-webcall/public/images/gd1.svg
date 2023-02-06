@@ -1,0 +1,10 @@
+<svg id="gd1" xmlns="http://www.w3.org/2000/svg" width="254" height="87" viewBox="0 0 254 87">
+  <path id="路径_7727" data-name="路径 7727" d="M10,0H77A10,10,0,0,1,87,10V254H0V10A10,10,0,0,1,10,0Z" transform="translate(0 87) rotate(-90)" fill="#fff"/>
+  <text id="操作說明" transform="translate(74 18)" fill="#707070" font-size="38" font-family="MicrosoftJhengHeiBold, Microsoft JhengHei" letter-spacing="0.08em"><tspan x="-80.56" y="41">操作說明</tspan></text>
+  <g id="组_287" data-name="组 287" transform="translate(-7.053 -10.032)">
+    <g id="组_55" data-name="组 55" transform="translate(28.664 34.819)">
+      <path id="路径_23" data-name="路径 23" d="M307.076,16.543a20.623,20.623,0,0,1-20.6-20.6,20.62,20.62,0,0,1,20.6-20.6,20.62,20.62,0,0,1,20.6,20.6A20.622,20.622,0,0,1,307.076,16.543Zm0-38.247A17.67,17.67,0,0,0,289.425-4.056,17.67,17.67,0,0,0,307.076,13.6,17.668,17.668,0,0,0,324.724-4.056,17.667,17.667,0,0,0,307.076-21.7Z" transform="translate(-286.477 24.652)" fill="#231f20"/>
+    </g>
+    <text id="_" data-name="!" transform="translate(43.299 67.532)" fill="#f15a21" font-size="34" font-family="MicrosoftJhengHeiBold, Microsoft JhengHei" letter-spacing="0.08em"><tspan x="0" y="0">!</tspan></text>
+  </g>
+</svg>

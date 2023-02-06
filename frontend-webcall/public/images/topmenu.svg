@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="110.53383414976759"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" style="" class="selected"/>
+  <defs>
+    <filter id="矩形_31" x="475" y="39" width="160" height="86" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="联合_2" x="0" y="0" width="1110" height="120.90299987792969" filterUnits="userSpaceOnUse">
+      <feOffset dx="8" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><g id="topmenu" class="">
+    <g filter="url(#联合_2)" id="svg_1">
+      <path id="联合_2-2" data-name="联合 2" d="M532.084,88.22399999999999 L481.94000000000005,45.464 A9.035,9.035 0 0 1 479.39099999999996,42 H0 V0 H1080 v42 H599.937 a9.035,9.035 0 0 1 -2.549,3.464 l-50.143,42.76 a12.068,12.068 0 0 1 -15.162,0 z" fill="#fff" stroke-width="0"/>
+    </g>
+    <g id="组_42" data-name="组 42">
+      <path id="路径_12" data-name="路径 12" d="M537.136,63.21499824523926 L522.5,80.71499824523926 L537.136,98.21499824523926 " transform="rotate(-90 522.5,63.214996337890604) " fill="none" stroke="#a1a1a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <path id="路径_13" data-name="路径 13" d="M537.136,77.99999809265137 L522.5,95.49999809265137 L537.136,112.99999809265137 " transform="rotate(-90 522.5000000000001,77.99999999999996) " fill="none" stroke="#a1a1a1" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    </g>
+  </g></g></svg>
