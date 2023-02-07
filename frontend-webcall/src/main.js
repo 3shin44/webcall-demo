@@ -3,6 +3,12 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+// Element UI
+import 'element-ui/lib/theme-chalk/switch.css';
+import {Switch} from 'element-ui';
+Vue.use(Switch)
+
+
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"

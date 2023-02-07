@@ -1,31 +1,28 @@
 <template>
   <div class="welcome-page">
-    		<!-- 客服圖示 -->
-			<div class="d-flex justify-content-center serviceIcon">
-				<img src="../../public/images/callcenter.svg" alt="">
-			</div>
-			<!-- 歡迎訊息 -->
-			<div class="welcomeMsg d-flex justify-content-center mt-3" v-html="welcomeMsg"></div>
+    	
+		<IconCard img-max-width="250" :display-msg="welcomeMsg" :icon-code="1" />
 
-			<!-- 通話按鈕 -->
-			<div>
-				<DialButton :call-button="true" :dial-button="true"  />
-			</div>
+		<!-- 通話按鈕 -->
+		<div class="align-bottom d-flex justify-content-center">
+			<BaseButton :icon-code="1"  />
+		</div>
 
   </div>
 </template>
 
 <script>
-import DialButton from '../components/DialButton.vue'
+import IconCard from '../components/IconCard.vue'
+import BaseButton from '../components/BaseButton.vue'
 
 export default {
   name: 'WelcomePage',
   components: {
-    DialButton
+    BaseButton, IconCard
   },
   data() {
     return {
-      welcomeMsg: "歡迎您使用承暉資訊WebCall"
+      welcomeMsg: "歡迎您使用<br>承暉資訊WebCall"
     }
   },
 }
@@ -33,7 +30,4 @@ export default {
 
 
 <style scoped>
-	.serviceIcon img{
-		max-width: 150px;
-	}
 </style>

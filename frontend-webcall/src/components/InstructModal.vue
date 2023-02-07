@@ -1,12 +1,12 @@
 <template>
   <div class="instruct-modal">
 
-    <button type="button" data-bs-toggle="modal" data-bs-target="#instructModal">
-      <img class="w-100" src="../../public/images/gd1.png" alt="info" >
+    <button type="button" data-bs-toggle="modal" data-bs-target="#instructModal" :class="{'min-width-50' : iconCode == 2 }" >
+      <img class="w-100 d-block" :src="iconSrc[iconCode]" alt="info" >
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="instructModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="instructModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -24,7 +24,7 @@
             </div>
             <div class="warning">
               <h6  class="fw-bold">注意事項</h6>
-              <p>請使用瀏覽器 Chrome、Edge、Safari、Firefox以上最新版本，以避免無法正常操作。<br>
+              <p class="px-3">請使用瀏覽器 Chrome、Edge、Safari、Firefox以上最新版本，以避免無法正常操作。<br>
                 若您一直響鈴無法通話，可能因為網路安全限制（例如防火牆阻擋），建議您改用一般電話或手機撥打 (00)0000-0000，0000-000-000通話，或改用文字交談功能。</p>
             </div>
           </div>
@@ -39,17 +39,38 @@
   export default {
     name: 'InstructModal',
     props: {
-    }
+      iconCode:{
+        Type: Number,
+        default: 1
+      }
+    },
+    data() {
+      return {
+        // 圖示來源
+				iconSrc: {
+					1: require("../../public/images/gd1.png"),
+					2: require("../../public/images/gd2.svg")
+				}
+      }
+    },
   }
 </script>
 
 
 <style scoped>
+  .instruct-modal>button{
+    padding: 0;
+    max-width: 100px;
+    background-color: transparent;
+    border: none;
+  }
 
-.instruct-modal>button{
-  padding: 0;
-  max-width: 100px;
-  background-color: transparent;
-  border: none;
-}
+  .instruct-modal .modal-dialog{
+    top: 10%;
+  }
+
+  /* 方形圖示 */
+  .min-width-50{
+    max-width: 40px !important;
+  }
 </style>

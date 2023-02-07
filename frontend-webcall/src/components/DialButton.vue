@@ -1,8 +1,8 @@
 <template>
 	<!-- 電話按鈕組件 -->
-	<div class="dial-button-page">
+	<div class="dial-button">
 		<!-- 數字鍵盤 -->
-		<div class="btnPadding" :class="{'invisible': !dialButton}">
+		<div class="btnPadding">
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('1')" @touchstart.stop.prevent="keyPress('1')"
 					@mouseup="keyUp('1')" @touchend="keyUp('1')">
@@ -75,51 +75,26 @@
 					<img src="../../public/images/dial/noicon2.svg" alt="#">
 				</button>
 			</div>
-		</div>
-
-		<!-- 通話按鈕 -->
-		<div class="callBtn btnPadding" v-if="callButton" >
-			<div class="call-btn-width">
-				<button class="callServiceBtn p-0" @click="callService(iconCode)">
-					<img :src="iconSrc[iconCode]" alt="">
-				</button>
+			<div class="btn-width">
+				<!-- 通話按鈕 -->
+				<BaseButton @click="emitClick" />
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import BaseButton from '@/components/BaseButton.vue'
 	export default {
 		name: 'DialButton',
-		components: {},
+		components: {
+			BaseButton
+		},
 		props: {
-			// 數字鍵盤, 撥號按鈕 開關
-			dialButton: {
-				Type: Boolean,
-				default: false
-			},
-			callButton: {
-				Type: Boolean,
-				default: false
-			},
-			// 撥號按鈕 狀態圖示
-			iconCode: {
-				Type: Number,
-				default: 1
-			},
+			
 		},
 		data() {
 			return {
-				// 防止短時間多次點按 
-				clicked: false,
-
-				// 通話按鈕圖示 圖片來源
-				iconSrc: {
-					1: require("../../public/images/greenphone.svg"),
-					2: require("../../public/images/redphone.svg"),
-					3: require("../../public/images/reld.svg"),
-					4: require("../../public/images/home.svg"),
-				}
 			}
 		},
 		methods: {
@@ -160,6 +135,10 @@
 						break;
 				}
 
+			},
+
+			emitClick(){
+				this.$emit("click")
 			}
 
 		},

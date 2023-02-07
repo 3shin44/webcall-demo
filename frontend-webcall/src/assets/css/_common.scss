@@ -1,140 +1,173 @@
-html, #app {
-	background-repeat: no-repeat;
-	background-size: 100vw;
-	background-color: lightgray;
+// 佈景主題切換
+// :root,
+//     :root.light {
+//     --bg-color: #1ab394;
+//     --text-color: #1c1f24;
+//     }
+//     :root.dark {
+//     --bg-color: #424b5c;
+//     --text-color: #ffffff;
+//     }
+
+html, body {
+	background: linear-gradient(-135deg, #e6a23c, #1ab394);
+	height: 100%;
+	width: 100%;
+	transition: 1s;
+  background-repeat: repeat;
 }
 
+.webcall-btn-primary {
+  border-radius: 50%;
+  border: none;
+  max-width: 80px;
+  max-height: 80px;
+}
+.webcall-btn-primary img {
+  border-radius: 50%;
+  width: 100%;
+  display: block;
+}
+
+.webcall-theme-text{
+	color: var(--text-color);
+}
 
 /* 頂端提示 mobile */
 .topMenu img {
-	position: relative;
-	left: 0;
-	right: 0;
-	transform: translateY(13px);
-	width: 45px;
-	height: 25px;
+  position: relative;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+  width: 45px;
+  height: 25px;
 }
 
-.hint-btn{
-	position: relative;
-	height: 15px;
-	background-color: white;
-	border: none;
+.hint-btn {
+	width: 100%;
+	margin: auto;
+  position: relative;
+  height: 5px;
+  background-color: white;
+  border: none;
+	border-radius: 0 0 5px 5px;
 }
-
 
 /* 頂端提示 tablet and above */
 .topMenuTablet {
-	display: none;
+  display: none;
 }
 
 @media screen and (min-width: 576px) {
-	.topMenuTablet {
-		display: block;
-		padding-bottom: 15px;
-	}
+  .topMenuTablet {
+    display: block;
+    padding-bottom: 15px;
+  }
 
-	.shadow-bar {
-		background-color: white;
-		width: 100%;
-		height: 15px;
-		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	}
+  .shadow-bar {
+    background-color: white;
+    width: 100%;
+    height: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 
-	.topMenuTablet img {
-		display: block;
-		margin: auto;
-		height: 20px;
-		width: 45px;
-	}
+  .topMenuTablet img {
+    display: block;
+    margin: auto;
+    height: 20px;
+    width: 45px;
+  }
 }
-
-
 
 /* 頂端提示訊息彈窗 */
-.hint-close{
-	top: 10px;
-	right: 10px;
+.hint-close {
+  top: 10px;
+  right: 10px;
 }
-.transparent-btn{
-	border: none;
-	background-color: transparent;
-	width: 100%;
+.transparent-btn {
+  border: none;
+  background-color: transparent;
+  width: 100%;
 }
 
 .contentStickTop {
-	padding: 10px;
+  padding: 10px;
 }
 
 .contentStickTop p {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .contentStickTop img {
-	margin: 0 5px 0 5px;
-	width: 16px;
-	height: 16px;
+  margin: 0 5px 0 5px;
+  width: 16px;
+  height: 16px;
 }
 
 .contentBox {
-	padding-left: 15px;
-	padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .borderBox {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	color: var(--highightFontColor);
-	border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: var(--highightFontColor);
+  border-bottom: 1px solid gray;
 }
 
 /* 不顯示底線 */
 .removeBottomLine {
-	border-bottom: unset;
+  border-bottom: unset;
 }
 
 .borderBox p {
-	padding: 10px;
+  padding: 10px;
 }
 
 .contentIcon img {
-	padding: 5px;
-	display: block;
-	width: 30px;
-	height: 30px;
+  padding: 5px;
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 .topContentArrow {
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 
-	width: 45px;
-	height: 25px;
-	/* clip-path: polygon(50% 100%, 0 0, 100% 0);
-	background-color: rgb(255, 255, 255); */
+  width: 45px;
+  height: 25px;
 }
 
 .topContentArrow img {
-	display: block;
-	width: 100%;
-	/* height: 50px; */
+  display: block;
+  width: 100%;
+  /* height: 50px; */
 }
 
-/* 導覽列 */
-.navBar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+#hintModal {
+  --bs-modal-margin: 0;
+  --bs-modal-width: 100%;
 }
 
-#hintModal{
-	--bs-modal-margin: 0;
-	--bs-modal-width: 100%;
+.company-logo img {
+  max-width: 250px;
 }
 
-.company-logo img{
-	max-width: 250px;
+.theme-switch{
+	--shift-px : 3px;
+	top: var(--shift-px);
+	right: var(--shift-px);
+}
+
+.align-bottom{
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
