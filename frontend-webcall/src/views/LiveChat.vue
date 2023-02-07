@@ -43,6 +43,8 @@
         clearInterval(this.countIntervalId)
         this.countingTime = 0
         this.countIntervalId = -1
+
+        this.$emit('updateService', 5)
       },
     },
     mounted() {

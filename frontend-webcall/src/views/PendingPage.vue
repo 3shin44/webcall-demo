@@ -21,14 +21,14 @@ export default {
   },
   data() {
     return {
-      count: 10
+      count: 3
     }
   },
   methods:{
     // 模擬倒數人數
     updateQueue(){
-      if( this.count==0 ){
-        this.count=10
+      if( this.count == 1 ){
+        this.$emit('updateService', 1)
       }else{
         this.count --
       }
@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted(){
-    setInterval(this.updateQueue, 5000)
+    setInterval(this.updateQueue, 2500)
   }
 }
 </script>

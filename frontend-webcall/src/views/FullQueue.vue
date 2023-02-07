@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      fullQueueMsg: `目前網路客服滿線中，請稍後再試，<br>或使用<a href="#">其他服務</a>`
+      fullQueueMsg: `目前網路客服滿線中，請稍後再試，或使用<a href="#">其他服務</a>`
     }
   },
   methods:{

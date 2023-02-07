@@ -26,6 +26,7 @@
   import PendingPage from './views/PendingPage.vue'
   import FullQueue from './views/FullQueue.vue'
   import NotSupport from './views/NotSupport.vue'
+  import ChatComplete from './views/ChatComplete.vue'
   // components
   import InstructModal from '@/components/InstructModal.vue'
   import TopModal from '@/components/TopModal.vue'
@@ -39,7 +40,7 @@
     components: {
       WelcomePage, LiveChat,
       PendingPage, FullQueue,
-      NotSupport,
+      NotSupport, ChatComplete,
       InstructModal, TopModal
     },
     data() {
@@ -54,7 +55,7 @@
       }
     },
     computed:{
-      // 解析網址後回傳對應元件名稱或預設元件
+      // 解析網址後回傳對應元件名稱或預設元件, 或元件傳值更新所需服務
       currentService(val){
         // 服務元件列表
         let serviceList = {
@@ -62,16 +63,16 @@
           1: "LiveChat",
           2: "PendingPage",
           3: "FullQueue",
-          4: "NotSupport"
+          4: "NotSupport",
+          5: "ChatComplete"
         }
         if( typeof(val) =='number' ){
           return serviceList[val] || "WelcomePage"
         }else{
           return serviceList[this.urlParams.status] || "WelcomePage"
         }
-
-        
       },
+
       // 僅在welcomepage展開操作說明圖示
       isExtend(){
         let imgCode = this.urlParams.status == 0 ? 1 : 2

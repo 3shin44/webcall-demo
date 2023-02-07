@@ -5,7 +5,7 @@
 
 		<!-- 通話按鈕 -->
 		<div class="align-bottom d-flex justify-content-center">
-			<BaseButton :icon-code="1"  />
+			<BaseButton :icon-code="1" @click="$emit('updateService', 2)"  />
 		</div>
 
   </div>

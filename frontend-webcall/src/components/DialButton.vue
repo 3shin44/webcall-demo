@@ -77,7 +77,7 @@
 			</div>
 			<div class="btn-width">
 				<!-- 通話按鈕 -->
-				<BaseButton @click="emitClick" />
+				<BaseButton :icon-code="2" @click="emitClick" />
 			</div>
 		</div>
 	</div>
@@ -104,37 +104,6 @@ import BaseButton from '@/components/BaseButton.vue'
 			},
 			keyUp(key) {
 				this.$bus.$emit("key-up", key);
-			},
-
-			// emit通話按鈕訊息
-			callService(iconCode) {
-
-				switch (iconCode) {
-					// 開始通話
-					case 1:
-						// emit觸發app進入通話服務
-						this.$bus.$emit("start-call");
-						break;
-
-					// 停止通話: emit訊息(觸發結束通話)
-					case 2:
-						this.$bus.$emit('stop-call');
-						break;
-
-					// 重新整理
-					case 3:
-						this.$bus.$emit('refresh', "3");
-						break;
-
-					// 回首頁: 導向KGI首頁
-					case 4:
-						location.href = "https://www.kgi.com.tw";
-						break;
-
-					default:
-						break;
-				}
-
 			},
 
 			emitClick(){
