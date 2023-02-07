@@ -4,7 +4,7 @@
 		<IconCard img-max-width="250" :display-msg="welcomeMsg" :icon-code="1" />
 
 		<!-- 通話按鈕 -->
-		<div class="align-bottom d-flex justify-content-center">
+		<div class="mt-5 pt-5 d-flex justify-content-center">
 			<BaseButton :icon-code="1" @click="$emit('updateService', 2)"  />
 		</div>
 

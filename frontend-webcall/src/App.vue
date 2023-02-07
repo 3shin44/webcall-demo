@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="transition-effect">
     <!-- 頂端提示導覽列 -->
     <TopModal class="mb-3" />
 
@@ -14,7 +14,14 @@
     </div>
 
     <!--服務元件 -->
-    <component :is="currentService" @updateService="updateService" />
+    <div class="service-container p-2 transition-effect">
+      <component :is="currentService" @updateService="updateService" />
+    </div>
+
+    <!-- <Transition class="position-relative ">
+        <component class="service-container p-2 transition-effect" :is="currentService" @updateService="updateService" />
+    </Transition> -->
+   
 
   </div>
 </template>
@@ -45,18 +52,20 @@
     },
     data() {
       return {
-        urlParams: null,
+        urlParams: {
+          status: 0
+        },
       }
     },
     methods: {
       updateService(val){
-        console.log("receive: ", val);
         this.urlParams.status = val
       }
     },
     computed:{
       // 解析網址後回傳對應元件名稱或預設元件, 或元件傳值更新所需服務
       currentService(val){
+        
         // 服務元件列表
         let serviceList = {
           0: "WelcomePage",
@@ -66,6 +75,7 @@
           4: "NotSupport",
           5: "ChatComplete"
         }
+        
         if( typeof(val) =='number' ){
           return serviceList[val] || "WelcomePage"
         }else{
@@ -81,7 +91,8 @@
     },
     created(){
       // 獲取網址參數
-      this.urlParams = functionUtil.getQueryStringObj()
+      let queryData = functionUtil.getQueryStringObj();
+      this.urlParams.status = queryData.status || 0
     }
   }
 </script>

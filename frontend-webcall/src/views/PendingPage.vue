@@ -2,7 +2,7 @@
   <div class="pending-page">
     <IconCard :display-msg="queueStatus" />
 		<!-- 通話按鈕 -->
-		<div class="align-bottom d-flex justify-content-center">
+		<div class="mt-5 pt-5 d-flex justify-content-center">
 			<BaseButton :icon-code="1"  />
 		</div>
   </div>
@@ -40,7 +40,7 @@ export default {
     }
   },
   mounted(){
-    setInterval(this.updateQueue, 2500)
+    setInterval(this.updateQueue, 1500)
   }
 }
 </script>

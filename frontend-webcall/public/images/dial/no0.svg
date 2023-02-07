@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130">
-  <g id="no0" transform="translate(-0.324 0.243)">
-    <circle id="椭圆_2" data-name="椭圆 2" cx="65" cy="65" r="65" transform="translate(0.324 -0.243)" fill="#0089d0"/>
-    <text id="_0" data-name="0" transform="translate(64.324 89.757)" fill="#fff" font-size="65" font-family="MicrosoftJhengHeiUILight, Microsoft JhengHei UI" letter-spacing="0.08em"><tspan x="-18.123" y="0">0</tspan></text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 192C0 103.6 71.6 32 160 32s160 71.6 160 160V320c0 88.4-71.6 160-160 160S0 408.4 0 320V192zM160 96c-53 0-96 43-96 96V320c0 53 43 96 96 96s96-43 96-96V192c0-53-43-96-96-96z"/></svg>

@@ -51,6 +51,11 @@
       setTimeout(() => {
         this.startCount();
       }, 1500);
+
+      // setTimeout(() => {
+      //   document.documentElement.style.setProperty('--doc-height', `${document.documentElement.scrollHeight}px`)
+      // }, 300);
+      
     }
   }
 </script>

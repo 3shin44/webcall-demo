@@ -1,11 +1,11 @@
 <template>
   <div class="top-modal">
 
-    <div class="topMenu d-flex mb-2">
+    <!-- Launch modal button -->
+    <div class="top-menu d-flex mb-2">
       <button data-bs-toggle="modal" class="hint-btn" data-bs-target="#hintModal">
         <img src="../../public/images/p_dw.svg" alt="arrdown">
       </button>
-
     </div>
 
     <!-- Hint Modal -->
@@ -24,7 +24,7 @@
                 <div class="contentIcon">
                   <img src="../../public/images/icon1.svg" alt="icon1">
                 </div>
-                <p>請開啟喇叭(或裝上「耳機」)及「麥克風」</p>
+                <p class="p-2 m-0">請開啟喇叭(或裝上「耳機」)及「麥克風」</p>
               </div>
             </div>
             <div class="contentBox">
@@ -32,7 +32,7 @@
                 <div class="contentIcon">
                   <img src="../../public/images/icon2.svg" alt="icon2">
                 </div>
-                <p>請留意網路順暢性</p>
+                <p class="p-2 m-0">請留意網路順暢性</p>
               </div>
 
             </div>
@@ -41,7 +41,7 @@
                 <div class="contentIcon">
                   <img src="../../public/images/icon3.svg" alt="icon3">
                 </div>
-                <p>若遇客服中心忙線時段，建議使用「智能客服」。文字對談簡單又快速</p>
+                <p class="p-2 m-0">若遇客服中心忙線時段，建議使用「智能客服」。文字對談簡單又快速</p>
               </div>
             </div>
 
@@ -66,5 +66,74 @@
 <style scoped>
   .top-modal .modal-dialog {
     top: 0;
+  }
+
+  .top-menu img {
+    position: relative;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    width: 45px;
+    height: 25px;
+  }
+
+  .hint-btn {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    height: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 0 0 5px 5px;
+  }
+
+
+  #hintModal {
+    --bs-modal-margin: 0;
+    --bs-modal-width: 100%;
+  }
+
+
+  .contentStickTop {
+    padding: 10px;
+  }
+
+  .contentStickTop p {
+    font-weight: bold;
+  }
+
+  .contentStickTop img {
+    margin: 0 5px 0 5px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .contentBox {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .borderBox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--highightFontColor);
+    border-bottom: 1px solid gray;
+  }
+
+  /* 不顯示底線 */
+  .removeBottomLine {
+    border-bottom: unset;
+  }
+
+  .borderBox p {
+    padding: 10px;
+  }
+
+  .contentIcon img {
+    padding: 5px;
+    display: block;
+    width: 30px;
+    height: 30px;
   }
 </style>

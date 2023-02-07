@@ -2,77 +2,77 @@
 	<!-- 電話按鈕組件 -->
 	<div class="dial-button">
 		<!-- 數字鍵盤 -->
-		<div class="btnPadding">
+		<div class="btn-padding">
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('1')" @touchstart.stop.prevent="keyPress('1')"
 					@mouseup="keyUp('1')" @touchend="keyUp('1')">
-					<img src="../../public/images/dial/no1.svg" alt="1">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no1.svg" alt="1">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('2')" @touchstart.stop.prevent="keyPress('2')"
 					@mouseup="keyUp('2')" @touchend="keyUp('2')">
-					<img src="../../public/images/dial/no2.svg" alt="2">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no2.svg" alt="2">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('3')" @touchstart.stop.prevent="keyPress('3')"
 					@mouseup="keyUp('3')" @touchend="keyUp('3')">
-					<img src="../../public/images/dial/no3.svg" alt="3">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no3.svg" alt="3">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('4')" @touchstart.stop.prevent="keyPress('4')"
 					@mouseup="keyUp('4')" @touchend="keyUp('4')">
-					<img src="../../public/images/dial/no4.svg" alt="4">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no4.svg" alt="4">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('5')" @touchstart.stop.prevent="keyPress('5')"
 					@mouseup="keyUp('5')" @touchend="keyUp('5')">
-					<img src="../../public/images/dial/no5.svg" alt="5">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no5.svg" alt="5">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('6')" @touchstart.stop.prevent="keyPress('6')"
 					@mouseup="keyUp('6')" @touchend="keyUp('6')">
-					<img src="../../public/images/dial/no6.svg" alt="6">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no6.svg" alt="6">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('7')" @touchstart.stop.prevent="keyPress('7')"
 					@mouseup="keyUp('7')" @touchend="keyUp('7')">
-					<img src="../../public/images/dial/no7.svg" alt="7">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no7.svg" alt="7">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('8')" @touchstart.stop.prevent="keyPress('8')"
 					@mouseup="keyUp('8')" @touchend="keyUp('8')">
-					<img src="../../public/images/dial/no8.svg" alt="8">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no8.svg" alt="8">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('9')" @touchstart.stop.prevent="keyPress('9')"
 					@mouseup="keyUp('9')" @touchend="keyUp('9')">
-					<img src="../../public/images/dial/no9.svg" alt="9">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no9.svg" alt="9">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('*')" @touchstart.stop.prevent="keyPress('*')"
 					@mouseup="keyUp('*')" @touchend="keyUp('*')">
-					<img src="../../public/images/dial/noicon1.svg" alt="*">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/noicon1.svg" alt="*">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('0')" @touchstart.stop.prevent="keyPress('0')"
 					@mouseup="keyUp('0')" @touchend="keyUp('0')">
-					<img src="../../public/images/dial/no0.svg" alt="0">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/no0.svg" alt="0">
 				</button>
 			</div>
 			<div class="btn-width">
 				<button class="btn-outline-primary p-0" @mousedown.stop.prevent="keyPress('#')" @touchstart.stop.prevent="keyPress('#')"
 					@mouseup="keyUp('#')" @touchend="keyUp('#')">
-					<img src="../../public/images/dial/noicon2.svg" alt="#">
+					<img class="w-50 h-50 m-auto" src="../../public/images/dial/noicon2.svg" alt="#">
 				</button>
 			</div>
 			<div class="btn-width">
@@ -100,10 +100,10 @@ import BaseButton from '@/components/BaseButton.vue'
 		methods: {
 			// 按鍵值emit至上層做處理
 			keyPress(key) {
-				this.$bus.$emit("key-press", key);
+				console.log(key);
 			},
 			keyUp(key) {
-				this.$bus.$emit("key-up", key);
+				// console.log(key);
 			},
 
 			emitClick(){
@@ -117,9 +117,8 @@ import BaseButton from '@/components/BaseButton.vue'
 
 <style scoped>
 	/* 電話按鈕 */
-	.btnPadding {
+	.btn-padding {
 		/* 本體位置 */
-		padding-top: 25px;
 		margin: auto;
 		max-width: 45%;
 		height: 80%;
@@ -132,10 +131,7 @@ import BaseButton from '@/components/BaseButton.vue'
 	}
 
 	@media screen and (min-width: 576px) {
-
-		/* 電話按鈕 */
-		.btnPadding {
-			/* 本體位置 */
+		.btn-padding {
 			max-width: 250px;
 			height: unset;
 		}
@@ -154,41 +150,7 @@ import BaseButton from '@/components/BaseButton.vue'
 		border: none;
 		aspect-ratio: 1;
 		border-radius: 50%;
+		background-color: white;
+		border: 1px solid gray;
 	}
-
-	.btn-outline-primary img {
-		display: block;
-		width: 100%;
-	}
-
-	.invisible {
-		display: none;
-	}
-
-	.callBtn {
-		height: 20%;
-	}
-
-	.callServiceBtn {
-		display: block;
-		margin: auto;
-		width: 100%;
-		max-width: 80px;
-		max-height: 80px;
-		border-radius: 50%;
-		border: none;
-	}
-
-	.callServiceBtn img {
-		display: block;
-		width: 100%;
-	}
-
-	/* .alignBottom {
-		position: absolute;
-		bottom: 15px;
-		left: 0;
-		right: 0;
-		margin: auto;
-	} */
 </style>

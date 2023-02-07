@@ -10,9 +10,8 @@
 //     }
 
 html, body {
+  height: 100%;
 	background: linear-gradient(-135deg, #e6a23c, #1ab394);
-	height: 100%;
-	width: 100%;
   background-repeat: repeat;
 }
 
@@ -89,70 +88,6 @@ html, body {
   width: 100%;
 }
 
-.contentStickTop {
-  padding: 10px;
-}
-
-.contentStickTop p {
-  font-weight: bold;
-}
-
-.contentStickTop img {
-  margin: 0 5px 0 5px;
-  width: 16px;
-  height: 16px;
-}
-
-.contentBox {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.borderBox {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: var(--highightFontColor);
-  border-bottom: 1px solid gray;
-}
-
-/* 不顯示底線 */
-.removeBottomLine {
-  border-bottom: unset;
-}
-
-.borderBox p {
-  padding: 10px;
-}
-
-.contentIcon img {
-  padding: 5px;
-  display: block;
-  width: 30px;
-  height: 30px;
-}
-
-.topContentArrow {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 45px;
-  height: 25px;
-}
-
-.topContentArrow img {
-  display: block;
-  width: 100%;
-  /* height: 50px; */
-}
-
-#hintModal {
-  --bs-modal-margin: 0;
-  --bs-modal-width: 100%;
-}
-
 .company-logo img {
   max-width: 250px;
 }
@@ -163,10 +98,10 @@ html, body {
 	right: var(--shift-px);
 }
 
-.align-bottom{
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
+.service-container{
+  width: 70%;
+  max-width: 500px;
+  border-radius: 10px;
   margin: auto;
+  background-color: #f3f3f4;
 }
