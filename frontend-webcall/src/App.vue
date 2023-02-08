@@ -14,13 +14,17 @@
     </div>
 
     <!--服務元件 -->
-    <div class="service-container p-2 transition-effect">
+    <!-- <div class="service-container p-2 transition-effect">
       <component :is="currentService" @updateService="updateService" />
-    </div>
+    </div> -->
 
     <!-- <Transition class="position-relative ">
         <component class="service-container p-2 transition-effect" :is="currentService" @updateService="updateService" />
     </Transition> -->
+
+    <transition name="translate" mode="out-in">
+      <component class="service-container p-2 transition-effect" :is="currentService" @updateService="updateService" />
+    </transition>
    
 
   </div>

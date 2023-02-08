@@ -105,3 +105,14 @@ html, body {
   margin: auto;
   background-color: #f3f3f4;
 }
+
+
+.translate-enter-active,
+.translate-leave-active {
+  transition: .3s;
+}
+
+.translate-enter-from,
+.translate-leave-to {
+  opacity: 0;
+}
