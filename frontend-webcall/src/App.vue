@@ -12,7 +12,7 @@
         <InstructModal :icon-code="isExtend" />
       </div>
     </div>
-
+    
     <!--服務元件 -->
     <!-- <div class="service-container p-2 transition-effect">
       <component :is="currentService" @updateService="updateService" />
@@ -45,6 +45,7 @@
   // util JS
   import functionUtil from "@/util/functionUtil"
 
+  import helloNpm from 'info-npm-test-package'
 
   export default {
     name: 'App',
