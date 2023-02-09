@@ -120,21 +120,12 @@ import BaseButton from '@/components/BaseButton.vue'
 	.btn-padding {
 		/* 本體位置 */
 		margin: auto;
-		max-width: 45%;
-		height: 80%;
 
 		/* 內部按鈕排列 */
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-	}
-
-	@media screen and (min-width: 576px) {
-		.btn-padding {
-			max-width: 250px;
-			height: unset;
-		}
 	}
 
 	.btn-width {

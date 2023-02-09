@@ -63,6 +63,8 @@
     max-width: 100px;
     background-color: transparent;
     border: none;
+    transition: .5s;
+    height: 35px;
   }
 
   .instruct-modal .modal-dialog{
@@ -71,6 +73,7 @@
 
   /* 方形圖示 */
   .min-width-50{
-    max-width: 40px !important;
+    height: 35px;
+    width: 35px;
   }
 </style>

@@ -47,7 +47,6 @@
 
 <style scoped>
 	.icon-card{
-		margin: auto;
 		width: 50%;
 		border-radius: 10px;
 		background-color: #f3f3f4;

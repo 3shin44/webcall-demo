@@ -1,10 +1,10 @@
 <template>
-  <div class="welcome-page">
+  <div class="welcome-page h-100 d-flex flex-column justify-content-between align-items-center">
     	
-		<IconCard img-max-width="250" :display-msg="welcomeMsg" :icon-code="1" />
+		<IconCard :display-msg="welcomeMsg" :icon-code="1" />
 
 		<!-- 通話按鈕 -->
-		<div class="mt-5 pt-5 d-flex justify-content-center">
+		<div class="d-flex justify-content-center align-items-center">
 			<BaseButton :icon-code="1" @click="$emit('updateService', 2)"  />
 		</div>
 

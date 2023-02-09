@@ -20,6 +20,17 @@ const functionUtil = {
 		}
 		return resultObj;
 	},
+
+	// 網頁高度重新計算 (vue virtualDOM cause incorrect height)
+	documentHeight(domId){
+		let getId = document.getElementById(domId)
+		let resetHeight = window.innerHeight
+		if(getId){
+			resetHeight = getId.scrollHeight
+		}
+		const doc = document.documentElement
+		doc.style.setProperty('--doc-height', `${resetHeight}px`)
+	}
 }
 
 export default functionUtil;

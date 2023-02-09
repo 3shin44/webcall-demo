@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="transition-effect">
+  <div id="app">
     <!-- 頂端提示導覽列 -->
     <TopModal class="mb-3" />
 
@@ -9,23 +9,16 @@
         <img src="">
       </div>
       <div class="d-flex align-items-center">
-        <InstructModal :icon-code="isExtend" />
+        <InstructModal  />
       </div>
     </div>
-    
+
+    <p></p>
     <!--服務元件 -->
-    <!-- <div class="service-container p-2 transition-effect">
-      <component :is="currentService" @updateService="updateService" />
-    </div> -->
-
-    <!-- <Transition class="position-relative ">
-        <component class="service-container p-2 transition-effect" :is="currentService" @updateService="updateService" />
-    </Transition> -->
-
-    <transition name="translate" mode="out-in">
-      <component class="service-container p-2 transition-effect" :is="currentService" @updateService="updateService" />
-    </transition>
-   
+    <div class="service-container mx-auto p-2">
+      <component :is="currentService" @updateService="updateService"  />
+    </div>
+    <div class="service-container-footer"></div>
 
   </div>
 </template>
@@ -58,8 +51,8 @@
     data() {
       return {
         urlParams: {
-          status: 0
-        },
+          status: 0,
+        }
       }
     },
     methods: {
@@ -98,6 +91,8 @@
       // 獲取網址參數
       let queryData = functionUtil.getQueryStringObj();
       this.urlParams.status = queryData.status || 0
+    },
+    mounted(){
     }
   }
 </script>

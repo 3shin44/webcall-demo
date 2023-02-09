@@ -1,13 +1,14 @@
 <template>
-  <div class="live-chat">
+  <div class="live-chat  h-100 d-flex flex-column justify-content-between align-items-center">
     <IconCard :display-msg="serviceMsg" />
-    <DialButton @click="endCount" />
+    <DialButton @click="endCount" class="livechat-dialbutton" />
   </div>
 </template>
 
 <script>
   import IconCard from '../components/IconCard.vue'
   import DialButton from '../components/DialButton.vue'
+  
   export default {
     name: 'LiveChat',
     components: {
@@ -51,16 +52,14 @@
       setTimeout(() => {
         this.startCount();
       }, 1500);
-
-      // setTimeout(() => {
-      //   document.documentElement.style.setProperty('--doc-height', `${document.documentElement.scrollHeight}px`)
-      // }, 300);
-      
     }
   }
 </script>
 
 
 <style scoped>
-
+.livechat-dialbutton{
+  width: 60%;
+  max-width: 150px;
+}
 </style>
