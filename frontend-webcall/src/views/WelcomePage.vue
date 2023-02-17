@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {
-      welcomeMsg: "歡迎您使用<br>承暉資訊WebCall"
+      welcomeMsg: "歡迎您使用<br>新光金控Web Call"
     }
   },
 }

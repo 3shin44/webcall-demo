@@ -16,7 +16,7 @@
             aria-label="Close"></button>
           <div class="">
             <div class="contentStickTop">
-              <p class="pe-4">歡迎您蒞臨承暉網路電話(Web Call)服務，本服務無須輸入客服電話，按下<span><img src="../../public/images/greenphone.svg"
+              <p class="pe-4">歡迎您蒞臨新光金控網路電話(Web Call)服務，本服務無須輸入客服電話，按下<span><img src="../../public/images/greenphone.svg"
                     alt=""></span>即可接通客服專員。</p>
             </div>
             <div class="contentBox">
