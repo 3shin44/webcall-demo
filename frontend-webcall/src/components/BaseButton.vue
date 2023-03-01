@@ -1,7 +1,7 @@
 <template>
 	<!-- 電話按鈕組件 -->
 	<div class="base-button">
-		<button class="webcall-btn-primary p-0" @click="emitClick">
+		<button class="webcall-btn-primary p-0 bg-transparent" @click="emitClick">
 			<img class="d-block w-100" :src="iconSrc[iconCode]" alt="">
 		</button>
 	</div>

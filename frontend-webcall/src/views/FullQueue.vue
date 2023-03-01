@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      fullQueueMsg: `目前網路客服滿線中，請稍後再試，或使用<a href="#">其他服務</a>`
+      fullQueueMsg: `目前電銷專員忙線中，建議您改用一般電話撥打0800-081-108按888，或手機撥打(02) 2171-1055按888，與電銷專員通話。`
     }
   },
   methods:{

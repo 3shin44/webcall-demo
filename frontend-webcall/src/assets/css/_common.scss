@@ -1,20 +1,8 @@
-// 佈景主題切換
-// :root,
-//     :root.light {
-//     --bg-color: #1ab394;
-//     --text-color: #1c1f24;
-//     }
-//     :root.dark {
-//     --bg-color: #424b5c;
-//     --text-color: #ffffff;
-//     }
-
 html{
   min-height: 100%;
-  background: #ff0844;
-  //background: -moz-linear-gradient(-135deg, rgba(230,162,60,1) 0%, rgba(26,179,148,1) 100%);
-  //background: -webkit-linear-gradient(-135deg, rgba(230,162,60,1) 0%, rgba(26,179,148,1) 100%);
-  background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: url("../../../public/images/bcg-gray.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body{
@@ -109,20 +97,29 @@ body{
   width: 70%;
   max-width: 500px;
   border-radius: 10px;
-  background-color: #f3f3f4;
-  height: 550px;
+  height: 600px;
+  background-image: url("../../../public/images/bcg-red.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .service-container-footer{
   height: 10px;
 }
 
-// .translate-enter-active,
-// .translate-leave-active {
-//   transition: all 0.5s ease;
-// }
+.text-unset{
+  margin-bottom: unset;
+}
 
-// .translate-enter-from,
-// .translate-leave-to {
-//   opacity: 0;
-// }
+.pt-70{
+  padding-top: 70px;
+}
+
+.bcg-gray{
+  background-color: #f8f9fa;
+}
+
+.text-color-white{
+  color: white;
+}
+

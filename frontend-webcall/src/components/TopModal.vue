@@ -41,7 +41,7 @@
                 <div class="contentIcon">
                   <img src="../../public/images/icon3.svg" alt="icon3">
                 </div>
-                <p class="p-2 m-0">若遇客服中心忙線時段，建議使用「智能客服」。文字對談簡單又快速</p>
+                <p class="p-2 m-0">若遇電銷專員忙線，您可選擇線上等候或使用留言功能。</p>
               </div>
             </div>
 
@@ -115,7 +115,7 @@
 
   .borderBox {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     color: var(--highightFontColor);
     border-bottom: 1px solid gray;

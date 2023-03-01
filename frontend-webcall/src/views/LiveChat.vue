@@ -1,6 +1,6 @@
 <template>
   <div class="live-chat  h-100 d-flex flex-column justify-content-between align-items-center">
-    <IconCard :display-msg="serviceMsg" />
+    <IconCard :display-msg="serviceMsg" :alert-msg="alertMsg" />
     <DialButton @click="endCount" class="livechat-dialbutton" />
   </div>
 </template>
@@ -22,7 +22,8 @@
         //顯示通話時間
         countIntervalId: -1,
         countingTime: 0,
-        serviceMsg: "連線中..."
+        serviceMsg: "通話連線中...",
+        alertMsg: ""
       }
     },
     methods: {
@@ -47,11 +48,20 @@
 
         this.$emit('updateService', 5)
       },
+
+      // 警示訊息
+      showAlertMsg(){
+        this.alertMsg = "您的裝置網路訊號不穩..."
+      }
     },
     mounted() {
       setTimeout(() => {
         this.startCount();
       }, 1500);
+
+      setTimeout(() => {
+        this.showAlertMsg();
+      }, 8000);
     }
   }
 </script>
