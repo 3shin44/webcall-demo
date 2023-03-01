@@ -16,7 +16,7 @@
     <p></p>
     <!--服務元件 -->
     <div class="service-container mx-auto p-2">
-      <component :is="currentService" class="pt-70" @updateService="updateService"  />
+      <component :is="currentService" class="pt-100" @updateService="updateService"  />
     </div>
     <div class="service-container-footer"></div>
 
