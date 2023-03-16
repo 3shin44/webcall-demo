@@ -15,8 +15,8 @@
 
     <p></p>
     <!--服務元件 -->
-    <div class="service-container mx-auto p-2">
-      <component :is="currentService" @updateService="updateService"  />
+    <div class="service-container p-2">
+      <component :is="currentService" @updateService="updateService" class="service-component mx-auto" />
     </div>
     <div class="service-container-footer"></div>
 
@@ -37,8 +37,6 @@
 
   // util JS
   import functionUtil from "@/util/functionUtil"
-
-  import helloNpm from 'info-npm-test-package'
 
   export default {
     name: 'App',
@@ -93,6 +91,7 @@
       this.urlParams.status = queryData.status || 0
     },
     mounted(){
+      console.log(this.$store.state.count)
     }
   }
 </script>

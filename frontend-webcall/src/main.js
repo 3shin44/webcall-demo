@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+// Vuex
+import store from '@/store'
 
 Vue.config.productionTip = false
 
@@ -7,7 +9,6 @@ Vue.config.productionTip = false
 import 'element-ui/lib/theme-chalk/switch.css';
 import {Switch} from 'element-ui';
 Vue.use(Switch)
-
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -18,4 +19,5 @@ import "../src/assets/css/index.scss"
 
 new Vue({
   render: h => h(App),
+  store: store,
 }).$mount('#app')
