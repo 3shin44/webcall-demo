@@ -1,5 +1,5 @@
 <template>
-  <div class="not-support h-100 d-flex flex-column justify-content-between align-items-center">
+  <div class="not-support h-100 d-flex flex-column align-items-center">
     <IconCard :icon-code="2" img-max-width="80" :display-msg="errorMsg" />
 
     <!-- 通話按鈕 -->

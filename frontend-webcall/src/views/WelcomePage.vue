@@ -1,10 +1,10 @@
 <template>
-  <div class="welcome-page h-100 d-flex flex-column justify-content-between align-items-center">
+  <div class="welcome-page">
     	
 		<IconCard :display-msg="welcomeMsg" :icon-code="1" />
 
 		<!-- 通話按鈕 -->
-		<div class="d-flex justify-content-center align-items-center">
+		<div class="d-flex justify-content-center align-items-center mt-3">
 			<BaseButton :icon-code="1" @click="$emit('updateService', 2)"  />
 		</div>
 
@@ -29,5 +29,6 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
+
 </style>

@@ -16,7 +16,7 @@
 			toggleValue: {
 				Type: Boolean,
 				default: true
-			} 
+			}
 
 		},
 		data() {
@@ -25,20 +25,20 @@
 			}
 		},
 		methods: {
-      themeSwitch: function (val) {
-        let themeName = val ? "dark" : "light"
-        document.documentElement.className = themeName;
-      }
+			themeSwitch: function (val) {
+				let themeName = val ? "dark" : "light"
+				document.documentElement.className = themeName;
+			}
 
 		},
 		watch: {
-			toggleValue: function (newVal){
+			toggleValue: function (newVal) {
 				this.value = newVal
 			}
 		},
-		created(){
+		created() {
 			let themeName = this.themeSwitch ? "dark" : "light"
-      document.documentElement.className = themeName;
+			document.documentElement.className = themeName;
 		}
 	}
 </script>
@@ -92,5 +92,11 @@
 		-webkit-transform: translateX(26px);
 		-ms-transform: translateX(26px);
 		transform: translateX(26px);
+	}
+
+	.theme-switch {
+		--shift-px: 3px;
+		top: var(--shift-px);
+		right: var(--shift-px);
 	}
 </style>

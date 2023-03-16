@@ -1,5 +1,5 @@
 <template>
-  <div class="pending-page h-100 d-flex flex-column justify-content-between align-items-center">
+  <div class="pending-page h-100 d-flex flex-column align-items-center">
     <IconCard :display-msg="queueStatus" />
 		<!-- 通話按鈕 -->
 		<div class="mt-5 pt-5 d-flex justify-content-center">

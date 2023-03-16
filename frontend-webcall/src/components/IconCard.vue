@@ -2,11 +2,11 @@
 	<!-- 圖卡說明 元件 -->
 	<div class="icon-card d-flex flex-column justify-content-center align-items-center">
 		<!-- 客服圖示 -->
-		<div :style="{ maxWidth: imgMaxWidth + 'px' }" class="pt-3">
+		<div class="icon-card-service-img">
 			<img class="w-100 d-block" :src="iconSrc[iconCode]" alt="">
 		</div>
 		<!-- 顯示訊息 -->
-		<p class="mt-3 text-center p-2" v-html="displayMsg"></p>
+		<p class="mt-3 text-center p-2 icon-card-font-size" v-html="displayMsg"></p>
 	</div>
 </template>
 
@@ -25,11 +25,6 @@
 				Type: Number,
 				default: 1
 			},
-			// 圖示最大寬度
-			imgMaxWidth:{
-				Type: Number,
-				default: 150
-			}
 		},
 		data() {
 			return {
@@ -47,8 +42,15 @@
 
 <style scoped>
 	.icon-card{
-		width: 50%;
 		border-radius: 10px;
 		background-color: #f3f3f4;
+	}
+
+	.icon-card-service-img{
+		width: 60%;
+	}
+
+	.icon-card-font-size{
+		font-size: 18px;
 	}
 </style>

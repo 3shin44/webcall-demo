@@ -1,5 +1,5 @@
 <template>
-  <div class="live-chat  h-100 d-flex flex-column justify-content-between align-items-center">
+  <div class="live-chat  h-100 d-flex flex-column align-items-center">
     <IconCard :display-msg="serviceMsg" />
     <DialButton @click="endCount" class="livechat-dialbutton" />
   </div>

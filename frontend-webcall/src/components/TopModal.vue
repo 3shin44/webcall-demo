@@ -136,4 +136,10 @@
     width: 30px;
     height: 30px;
   }
+
+  /* 頂端提示訊息彈窗 */
+  .hint-close {
+    top: 10px;
+    right: 10px;
+  }
 </style>

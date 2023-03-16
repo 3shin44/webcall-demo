@@ -1,7 +1,7 @@
 <template>
 	<!-- 電話按鈕組件 -->
 	<div class="base-button">
-		<button class="webcall-btn-primary p-0" @click="emitClick">
+		<button class="base-button-primary p-0" @click="emitClick">
 			<img class="d-block w-100" :src="iconSrc[iconCode]" alt="">
 		</button>
 	</div>
@@ -33,7 +33,7 @@
 			}
 		},
 		methods: {
-			emitClick(){
+			emitClick() {
 				this.$emit('click')
 			}
 		}
@@ -41,5 +41,22 @@
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
+	.base-button-primary {
+		--btn-primary-size: 75px;
+		border-radius: 50%;
+		border: none;
+		max-width: var(--btn-primary-size);
+		max-height: var(--btn-primary-size);
+	}
+
+	.base-button-primary img {
+		border-radius: 50%;
+		width: 100%;
+		display: block;
+	}
+
+	.webcall-theme-text {
+		color: var(--text-color);
+	}
 </style>

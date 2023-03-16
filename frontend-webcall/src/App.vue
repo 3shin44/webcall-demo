@@ -9,16 +9,23 @@
         <img src="">
       </div>
       <div class="d-flex align-items-center">
-        <InstructModal  />
+        <InstructModal :icon-code="isExtend" />
       </div>
     </div>
 
-    <p></p>
     <!--服務元件 -->
     <div class="service-container p-2">
-      <component :is="currentService" @updateService="updateService" class="service-component mx-auto" />
+      <component :is="getComponent" @updateService="updateService" class="service-component mx-auto pt-3" />
     </div>
-    <div class="service-container-footer"></div>
+
+    <!-- dev tool -->
+    <div class="btn-group ms-3" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-dark" @click="urlParams.status = 0">0</button>
+      <button type="button" class="btn btn-dark" @click="urlParams.status = 1">1</button>
+      <button type="button" class="btn btn-dark" @click="urlParams.status = 2">2</button>
+      <button type="button" class="btn btn-dark" @click="urlParams.status = 3">3</button>
+      <button type="button" class="btn btn-dark" @click="urlParams.status = 4">4</button>
+    </div>
 
   </div>
 </template>
@@ -54,14 +61,16 @@
       }
     },
     methods: {
-      updateService(val){
+      // 改變當前服務值
+      updateService(val) {
         this.urlParams.status = val
-      }
+      },
+
+
     },
-    computed:{
-      // 解析網址後回傳對應元件名稱或預設元件, 或元件傳值更新所需服務
-      currentService(val){
-        
+    computed: {
+      // 回傳元件名稱
+      getComponent() {
         // 服務元件列表
         let serviceList = {
           0: "WelcomePage",
@@ -71,31 +80,35 @@
           4: "NotSupport",
           5: "ChatComplete"
         }
-        
-        if( typeof(val) =='number' ){
-          return serviceList[val] || "WelcomePage"
-        }else{
-          return serviceList[this.urlParams.status] || "WelcomePage"
-        }
+        return serviceList[this.urlParams.status] || "WelcomePage"
       },
 
-      // 僅在welcomepage展開操作說明圖示
-      isExtend(){
+      // 在welcomepage展開操作說明圖示
+      isExtend() {
         let imgCode = this.urlParams.status == 0 ? 1 : 2
         return imgCode
       }
     },
-    created(){
+    created() {
       // 獲取網址參數
       let queryData = functionUtil.getQueryStringObj();
       this.urlParams.status = queryData.status || 0
     },
-    mounted(){
-      console.log(this.$store.state.count)
+    mounted() {
+
     }
   }
 </script>
 
-<style>
+<style scoped land="scss">
+  .company-logo img {
+    max-width: 250px;
+  }
 
+  .service-component {
+    max-width: 350px;
+    min-height: 650px;
+    border-radius: 10px;
+    background-color: #f3f3f4;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="full-queue h-100 d-flex flex-column justify-content-between align-items-center">
+  <div class="full-queue h-100 d-flex flex-column align-items-center">
     <IconCard :display-msg="fullQueueMsg" />
     		<!-- 通話按鈕 -->
 		<div class="align-bottom d-flex justify-content-center">
