@@ -1,7 +1,7 @@
 <template>
 	<!-- 電話按鈕組件 -->
 	<div class="base-button">
-		<button class="base-button-primary p-0" @click="emitClick">
+		<button class="base-button-primary p-0" :class="{'base-button-outline-primary': $attrs.border=='' }" @click="emitClick" :style="{width : buttonWidth +'px'}">
 			<img class="d-block w-100" :src="iconSrc[iconCode]" alt="">
 		</button>
 	</div>
@@ -17,6 +17,10 @@
 				Type: Number,
 				default: 1
 			},
+			buttonWidth:{
+				Type: Number,
+				default: 75
+			},
 		},
 		data() {
 			return {
@@ -29,6 +33,10 @@
 					2: require("../../public/images/redphone.svg"),
 					3: require("../../public/images/reld.svg"),
 					4: require("../../public/images/home.svg"),
+					5: require("../../public/images/mute_on.svg"),
+					6: require("../../public/images/mute_off.svg"),
+					7: require("../../public/images/dial_on.svg"),
+					8: require("../../public/images/dial_off.svg"),
 				}
 			}
 		},
@@ -43,20 +51,30 @@
 
 <style scoped lang="scss">
 	.base-button-primary {
-		--btn-primary-size: 75px;
 		border-radius: 50%;
 		border: none;
-		max-width: var(--btn-primary-size);
-		max-height: var(--btn-primary-size);
+		
 	}
 
 	.base-button-primary img {
 		border-radius: 50%;
 		width: 100%;
+		aspect-ratio: 1;
 		display: block;
 	}
 
 	.webcall-theme-text {
 		color: var(--text-color);
+	}
+
+	.base-button-outline-primary {
+		border: none;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: white;
+		border: 1px solid gray;
+	}
+	.base-button-outline-primary img{
+		padding: 5px;
 	}
 </style>

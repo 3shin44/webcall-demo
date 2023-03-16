@@ -3,7 +3,7 @@
     <IconCard :icon-code="2" img-max-width="80" :display-msg="errorMsg" />
 
     <!-- 通話按鈕 -->
-    <div class="align-bottom d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center mt-3">
       <BaseButton :icon-code="3" @click="$emit('updateService', 0)" />
     </div>
   </div>

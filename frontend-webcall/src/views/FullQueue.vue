@@ -2,7 +2,7 @@
   <div class="full-queue h-100 d-flex flex-column align-items-center">
     <IconCard :display-msg="fullQueueMsg" />
     		<!-- 通話按鈕 -->
-		<div class="align-bottom d-flex justify-content-center">
+		<div class="d-flex justify-content-center align-items-center mt-3">
 			<BaseButton :icon-code="4" />
 		</div>
   </div>

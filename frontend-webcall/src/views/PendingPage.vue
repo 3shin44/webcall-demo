@@ -2,7 +2,7 @@
   <div class="pending-page h-100 d-flex flex-column align-items-center">
     <IconCard :display-msg="queueStatus" />
 		<!-- 通話按鈕 -->
-		<div class="mt-5 pt-5 d-flex justify-content-center">
+		<div class="d-flex justify-content-center align-items-center mt-3">
 			<BaseButton :icon-code="1"  />
 		</div>
   </div>

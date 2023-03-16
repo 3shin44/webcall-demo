@@ -2,7 +2,7 @@
   <div class="chat-complete h-100 d-flex flex-column align-items-center">
     <IconCard display-msg="感謝您的來電" />
     <!-- 通話按鈕 -->
-    <div class="mt-5 pt-5 d-flex justify-content-center">
+    <div class="d-flex justify-content-center align-items-center mt-3">
       <BaseButton :icon-code="4" @click="$emit('updateService', 0)" />
     </div>
   </div>

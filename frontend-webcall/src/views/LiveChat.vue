@@ -1,7 +1,7 @@
 <template>
-  <div class="live-chat  h-100 d-flex flex-column align-items-center">
+  <div class="live-chat d-flex flex-column align-items-center">
     <IconCard :display-msg="serviceMsg" />
-    <DialButton @click="endCount" class="livechat-dialbutton" />
+    <DialButton @click="endCount" class="live-chat-dialbutton" />
   </div>
 </template>
 
@@ -58,8 +58,7 @@
 
 
 <style scoped>
-.livechat-dialbutton{
-  width: 60%;
-  max-width: 150px;
+.live-chat-dialbutton{
+  max-width: 230px;
 }
 </style>
