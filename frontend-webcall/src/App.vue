@@ -95,7 +95,7 @@
       this.urlParams.status = queryData.status || 0
     },
     mounted() {
-
+      console.log(this.$store.state.vuexMsg);
     }
   }
 </script>

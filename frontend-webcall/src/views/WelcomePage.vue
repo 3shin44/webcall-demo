@@ -25,6 +25,7 @@ export default {
       welcomeMsg: "歡迎您使用<br>承暉資訊WebCall"
     }
   },
+
 }
 </script>
 

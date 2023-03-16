@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     count: 5,
-
+    vuexMsg: "vuex msg test",
     chatCore: null
   },
   mutations: {
