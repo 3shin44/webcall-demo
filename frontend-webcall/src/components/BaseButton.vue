@@ -74,7 +74,4 @@
 		background-color: white;
 		border: 1px solid gray;
 	}
-	.base-button-outline-primary img{
-		padding: 5px;
-	}
 </style>
