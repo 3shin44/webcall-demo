@@ -19,7 +19,7 @@
     </div>
 
     <!-- dev tool -->
-    <div class="btn-group ms-3" role="group" aria-label="Basic example">
+    <div v-if="devMode" class="btn-group ms-3" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-dark" @click="urlParams.status = 0">0</button>
       <button type="button" class="btn btn-dark" @click="urlParams.status = 1">1</button>
       <button type="button" class="btn btn-dark" @click="urlParams.status = 2">2</button>
@@ -55,6 +55,7 @@
     },
     data() {
       return {
+        devMode: process.env.NODE_ENV == "development",
         urlParams: {
           status: 0,
         }
@@ -95,7 +96,6 @@
       this.urlParams.status = queryData.status || 0
     },
     mounted() {
-      console.log(this.$store.state.vuexMsg);
     }
   }
 </script>

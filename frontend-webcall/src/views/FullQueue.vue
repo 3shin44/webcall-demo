@@ -3,7 +3,7 @@
     <IconCard :display-msg="fullQueueMsg" />
     		<!-- 通話按鈕 -->
 		<div class="d-flex justify-content-center align-items-center mt-3">
-			<BaseButton :icon-code="4" />
+			<BaseButton :icon-code="4" @click="$emit('updateService', 0)" />
 		</div>
   </div>
 </template>
