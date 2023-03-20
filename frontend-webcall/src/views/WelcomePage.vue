@@ -5,7 +5,7 @@
 
 		<!-- 通話按鈕 -->
 		<div class="d-flex justify-content-center align-items-center mt-3">
-			<BaseButton :icon-code="1" @click="$emit('updateService', 1)"  />
+			<BaseButton :icon-code="1" @click="$emit('updateService', 1)" :button-width="68" />
 		</div>
 
   </div>

@@ -3,7 +3,7 @@
     <IconCard display-msg="感謝您的來電" />
     <!-- 通話按鈕 -->
     <div class="d-flex justify-content-center align-items-center mt-3">
-      <BaseButton :icon-code="4" @click="$emit('updateService', 0)" />
+      <BaseButton :icon-code="4" @click="$emit('updateService', 0)" :button-width="68" />
     </div>
   </div>
 </template>

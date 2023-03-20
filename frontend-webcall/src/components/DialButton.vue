@@ -78,7 +78,7 @@
 			<!-- 功能按鈕列 -->
 			<div class="btn-width">
 				<!-- 靜音 -->
-				<BaseButton class="d-flex justify-content-center" border :icon-code="switchMute ? 5 : 6" @click="switchMute = !switchMute" :button-width="58" />
+				<BaseButton class="d-flex justify-content-center" border :icon-code="switchMute ? 5 : 6" @click="switchMute = !switchMute" :button-width="52" />
 			</div>
 			<div class="btn-width">
 				<!-- 結束通話 -->
@@ -86,7 +86,7 @@
 			</div>
 			<div class="btn-width">
 				<!-- 隱藏鍵盤 -->
-				<BaseButton class="d-flex justify-content-center" border :icon-code="hideDial ? 8 : 7" @click="hideDial = !hideDial" :button-width="58"  />
+				<BaseButton class="d-flex justify-content-center" border :icon-code="hideDial ? 8 : 7" @click="hideDial = !hideDial" :button-width="52"  />
 			</div>
 		</div>
 	</div>
@@ -150,7 +150,7 @@ import BaseButton from '@/components/BaseButton.vue'
 	}
 
 	.btn-width button{
-		width: 58px;
+		width: 52px;
 	}
 
 	.call-btn-width {
