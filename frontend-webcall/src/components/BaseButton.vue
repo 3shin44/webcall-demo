@@ -19,7 +19,7 @@
 			},
 			buttonWidth:{
 				Type: Number,
-				default: 75
+				default: 68
 			},
 		},
 		data() {
