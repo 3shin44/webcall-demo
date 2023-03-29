@@ -38,7 +38,6 @@
   // util JS
   import functionUtil from "@/util/functionUtil"
 
-  import helloNpm from 'info-npm-test-package'
 
   export default {
     name: 'App',
