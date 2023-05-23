@@ -5,8 +5,13 @@
 		<div class="icon-card-service-img">
 			<img class="w-100 d-block" :src="iconSrc[iconCode]" alt="">
 		</div>
-		<!-- 顯示訊息 -->
-		<p class="mt-3 text-center p-2 icon-card-font-size" v-html="displayMsg"></p>
+		<div class="icon-card-msg-container p-3">
+			<!-- 顯示訊息 -->
+			<p class="text-center text-reset" v-html="displayMsg"></p>
+			<!-- 警示訊息 -->
+			<p class="text-center text-reset" :class="{'icon-card-min-height': alertMsgMinHeight}" v-html="alertMsg"></p>
+		</div>
+
 	</div>
 </template>
 
@@ -20,8 +25,18 @@
 				Type: String,
 				default: ""
 			},
+			// 警示訊息: HTML格式
+			alertMsg: {
+				Type: String,
+				default: ""
+			},
+			// 警示訊息最小高度
+			alertMsgMinHeight:{
+				Type: Boolean,
+				default: false
+			},
 			// 圖示編號
-			iconCode:{
+			iconCode: {
 				Type: Number,
 				default: 1
 			},
@@ -41,16 +56,20 @@
 </script>
 
 <style scoped>
-	.icon-card{
+	.icon-card {
 		border-radius: 10px;
 		background-color: #f3f3f4;
 	}
 
-	.icon-card-service-img{
+	.icon-card-service-img {
 		width: 60%;
 	}
 
-	.icon-card-font-size{
+	.icon-card-msg-container p {
 		font-size: 18px;
+	}
+
+	.icon-card-min-height {
+		min-height: 27px;
 	}
 </style>

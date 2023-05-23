@@ -22,7 +22,7 @@
     <div v-if="devMode" class="btn-group ms-3" role="group" aria-label="Basic example">
 
       <button 
-        v-for="(item, index) in 5" 
+        v-for="(item, index) in 6" 
         :key="index" 
         @click="()=>{ urlParams.status = item }"
         type="button" 
