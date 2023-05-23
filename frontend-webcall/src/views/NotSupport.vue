@@ -4,7 +4,7 @@
 
     <!-- 通話按鈕 -->
     <div class="d-flex justify-content-center align-items-center mt-3">
-      <BaseButton :icon-code="3" @click="$emit('updateService', 0)" />
+      <BaseButton :icon-code="3" @click="$emit('updateService', 6)" />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@
     },
     data() {
       return {
-        errorMsg: `請確認目前使用的電腦或手機裝置網路連線是否開啟，確認連線正常後再點選下方按鈕重新連線`
+        errorMsg: `Sorry!  本系統不支援您使用的瀏覽器，Android建議改用Chrome，iOS請改Safari後再重新操作。`
       }
     },
     methods: {

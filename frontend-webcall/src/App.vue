@@ -20,28 +20,30 @@
 
     <!-- dev tool -->
     <div v-if="devMode" class="btn-group ms-3" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-dark" @click="urlParams.status = 0">0</button>
-      <button type="button" class="btn btn-dark" @click="urlParams.status = 1">1</button>
-      <button type="button" class="btn btn-dark" @click="urlParams.status = 2">2</button>
-      <button type="button" class="btn btn-dark" @click="urlParams.status = 3">3</button>
-      <button type="button" class="btn btn-dark" @click="urlParams.status = 4">4</button>
+
+      <button 
+        v-for="(item, index) in 5" 
+        :key="index" 
+        @click="()=>{ urlParams.status = item }"
+        type="button" 
+        class="btn btn-dark">{{ item }}
+      </button>
     </div>
 
   </div>
 </template>
 
 <script>
-  // views  NotSupport
+  // views
   import WelcomePage from './views/WelcomePage.vue'
   import LiveChat from './views/LiveChat.vue'
-  import PendingPage from './views/PendingPage.vue'
   import FullQueue from './views/FullQueue.vue'
   import NotSupport from './views/NotSupport.vue'
   import ChatComplete from './views/ChatComplete.vue'
+  import AbnormalConnect from './views/AbnormalConnect.vue'
   // components
   import InstructModal from '@/components/InstructModal.vue'
   import TopModal from '@/components/TopModal.vue'
-
   // util JS
   import functionUtil from "@/util/functionUtil"
 
@@ -49,7 +51,7 @@
     name: 'App',
     components: {
       WelcomePage, LiveChat,
-      PendingPage, FullQueue,
+      AbnormalConnect, FullQueue,
       NotSupport, ChatComplete,
       InstructModal, TopModal
     },
@@ -74,12 +76,12 @@
       getComponent() {
         // 服務元件列表
         let serviceList = {
-          0: "WelcomePage",
           1: "LiveChat",
-          2: "PendingPage",
+          2: "NotSupport",
           3: "FullQueue",
-          4: "NotSupport",
-          5: "ChatComplete"
+          4: "AbnormalConnect",
+          5: "ChatComplete",
+          6: "WelcomePage",
         }
         return serviceList[this.urlParams.status] || "WelcomePage"
       },
@@ -91,9 +93,9 @@
       }
     },
     created() {
-      // 獲取網址參數
+      // 獲取網址參數 ( 預設服務6(歡迎頁) )
       let queryData = functionUtil.getQueryStringObj();
-      this.urlParams.status = queryData.status || 0
+      this.urlParams.status = queryData.status || 6
     },
     mounted() {
     }
