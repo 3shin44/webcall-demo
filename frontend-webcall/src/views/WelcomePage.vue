@@ -5,7 +5,7 @@
 
 		<!-- 通話按鈕 -->
 		<div class="d-flex justify-content-center align-items-center mt-3">
-			<BaseButton :icon-code="1" @click="$emit('updateService', 1)" :button-width="68" />
+			<BaseButton :icon-code="1" @click="makeCall" :button-width="68" />
 		</div>
 
   </div>
@@ -14,6 +14,7 @@
 <script>
 import IconCard from '../components/IconCard.vue'
 import BaseButton from '../components/BaseButton.vue'
+import functionUtil from '../util/functionUtil'
 
 export default {
   name: 'WelcomePage',
@@ -25,6 +26,16 @@ export default {
       welcomeMsg: "歡迎您使用<br>承暉資訊WebCall"
     }
   },
+  methods: {
+    makeCall(){
+      functionUtil.requestPermission( this.checkBusy )
+      
+    },
+    // 檢查客服狀態與進線
+    checkBusy(){
+      this.$emit('updateService', 1)
+    }
+  }
 
 }
 </script>

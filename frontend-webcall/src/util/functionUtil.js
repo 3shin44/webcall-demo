@@ -62,13 +62,13 @@ const functionUtil = {
 				success()
 
 				// 初次授予權限後 監聽裝置狀態改變
-				if (utilState.initDeviceFlag) {
-					utilState.initDeviceFlag = false
-					// 監聽 權限狀態變動
-					functionUtil.permissionChanged()
-					// 監聽 裝置狀態變動
-					functionUtil.deviceChanged()
-				}
+				// if (utilState.initDeviceFlag) {
+				// 	utilState.initDeviceFlag = false
+				// 	// 監聽 權限狀態變動
+				// 	functionUtil.permissionChanged()
+				// 	// 監聽 裝置狀態變動
+				// 	functionUtil.deviceChanged()
+				// }
 			})
 			.catch(error => {
 				// fail function

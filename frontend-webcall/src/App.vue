@@ -98,6 +98,8 @@
       this.urlParams.status = queryData.status || 6
     },
     mounted() {
+      // 取得麥克風權限, 授予權限後檢查是否有對應裝置 (檢查是否有麥克風)
+      functionUtil.requestPermission( functionUtil.checkMicrophone )
     }
   }
 </script>
