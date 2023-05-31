@@ -26,15 +26,11 @@ const functionUtil = {
 		return resultObj;
 	},
 
-	// 網頁高度重新計算 (vue virtualDOM cause incorrect height)
-	documentHeight(domId) {
-		let getId = document.getElementById(domId)
-		let resetHeight = window.innerHeight
-		if (getId) {
-			resetHeight = getId.scrollHeight
-		}
+	// 網頁高度重新計算 (iOS計算 vh方式不同, 此功能在HTML根結點加入CSS變數"--doc-height", 產生後使用此變數取代vh)
+	documentHeight() {
 		const doc = document.documentElement
-		doc.style.setProperty('--doc-height', `${resetHeight}px`)
+		doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+		window.addEventListener('resize', functionUtil.documentHeight)
 	},
 
 	// window.alert 警示訊息
@@ -62,13 +58,13 @@ const functionUtil = {
 				success()
 
 				// 初次授予權限後 監聽裝置狀態改變
-				// if (utilState.initDeviceFlag) {
-				// 	utilState.initDeviceFlag = false
-				// 	// 監聽 權限狀態變動
-				// 	functionUtil.permissionChanged()
-				// 	// 監聽 裝置狀態變動
-				// 	functionUtil.deviceChanged()
-				// }
+				if (utilState.initDeviceFlag) {
+					utilState.initDeviceFlag = false
+					// 監聽 權限狀態變動
+					functionUtil.permissionChanged()
+					// 監聽 裝置狀態變動
+					functionUtil.deviceChanged()
+				}
 			})
 			.catch(error => {
 				// fail function

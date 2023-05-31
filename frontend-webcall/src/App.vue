@@ -88,13 +88,13 @@
 
       // 在welcomepage展開操作說明圖示
       isExtend() {
-        let imgCode = this.urlParams.status == 0 ? 1 : 2
+        let imgCode = this.urlParams.status == 6 ? 1 : 2
         return imgCode
       }
     },
     created() {
       // 獲取網址參數 ( 預設服務6(歡迎頁) )
-      let queryData = functionUtil.getQueryStringObj();
+      let queryData = functionUtil.getQueryStringObj()
       this.urlParams.status = queryData.status || 6
     },
     mounted() {
