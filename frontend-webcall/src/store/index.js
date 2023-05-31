@@ -5,14 +5,9 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 5,
-    vuexMsg: "vuex msg test",
     chatCore: null
   },
   mutations: {
-    increment (state) {
-      state.count++
-    },
     // 實體化chatCore
     createChatCore(state, newChatCore){
       state.chatCore = newChatCore

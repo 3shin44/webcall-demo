@@ -69,7 +69,7 @@ const functionUtil = {
 			.catch(error => {
 				// fail function
 				fail()
-				// , console.log提示
+				// error 提示
 				console.log(error)
 				// 有授予權限但沒裝置 getUserMedia會直接走catch
 				if (error.message.includes("Requested device not found")) {
