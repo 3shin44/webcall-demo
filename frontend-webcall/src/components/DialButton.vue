@@ -107,19 +107,20 @@ import BaseButton from '@/components/BaseButton.vue'
 				hideDial: false,
 				switchMute: false,
 				dtmf: null,
+				tone: 150,
 				dtmfFrequencies: {
 					"1": { f1: 697, f2: 1209 },
-					"2": { f1: 697, f2: 1336 },
-					"3": { f1: 697, f2: 1477 },
-					"4": { f1: 770, f2: 1209 },
-					"5": { f1: 770, f2: 1336 },
-					"6": { f1: 770, f2: 1477 },
-					"7": { f1: 852, f2: 1209 },
-					"8": { f1: 852, f2: 1336 },
-					"9": { f1: 852, f2: 1477 },
-					"*": { f1: 941, f2: 1209 },
-					"0": { f1: 941, f2: 1336 },
-					"#": { f1: 941, f2: 1477 }
+					"2": { f1: 697, f2: 1209 },
+					"3": { f1: 697, f2: 1209 },
+					"4": { f1: 697, f2: 1209 },
+					"5": { f1: 697, f2: 1209 },
+					"6": { f1: 697, f2: 1209 },
+					"7": { f1: 697, f2: 1209 },
+					"8": { f1: 697, f2: 1209 },
+					"9": { f1: 697, f2: 1209 },
+					"*": { f1: 697, f2: 1209 },
+					"0": { f1: 697, f2: 1209 },
+					"#": { f1: 697, f2: 1209 }
 				},
 			}
 		},
@@ -157,10 +158,28 @@ import BaseButton from '@/components/BaseButton.vue'
 
 			hideDialButton(){
 				this.hideDial = !this.hideDial
-			}
+			},
 
+			dtmfBias(){
+				console.log("BEFORE");
+				for (const [key, value] of Object.entries(this.dtmfFrequencies)) {
+
+					console.log(`f1: ${value.f1}, f2: ${value.f2}`);
+				}
+
+				for (const [key, value] of Object.entries(this.dtmfFrequencies)) {
+					this.dtmfFrequencies[key].f1 += this.tone
+					this.dtmfFrequencies[key].f2 += this.tone
+				}
+				console.log("AFTER");
+				for (const [key, value] of Object.entries(this.dtmfFrequencies)) {
+
+					console.log(`f1: ${value.f1}, f2: ${value.f2}`);
+				}
+			}
 		},
 		mounted(){
+			this.dtmfBias()
 			// Play DTMF Tone function 
 			const AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 

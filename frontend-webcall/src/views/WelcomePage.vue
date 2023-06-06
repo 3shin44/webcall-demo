@@ -28,7 +28,12 @@ export default {
   },
   methods: {
     makeCall(){
-      functionUtil.requestPermission( this.checkBusy )
+      // PROD: 正常流程, DEV為離線使用, 僅展示頁面不檢查裝置
+      if( process.env.NODE_ENV == "production" ){
+        functionUtil.requestPermission( this.checkBusy )
+      }else{
+        this.checkBusy()
+      }
       
     },
     // 檢查客服狀態與進線

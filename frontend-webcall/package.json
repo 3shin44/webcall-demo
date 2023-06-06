@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 8081",
-    "build": "vue-cli-service build",
+    "serve-DEV": "vue-cli-service serve --mode development --port 8081",
+    "serve-PROD": "vue-cli-service serve --mode production --port 8081",
+    "build": "vue-cli-service build", 
+    "build-DEV": "vue-cli-service build --mode development",
+    "build-PROD": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

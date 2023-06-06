@@ -29,3 +29,8 @@ pnpm-debug.log*
 *.sln
 *.sw?
 frontend-webcall/.npmrc
+
+
+# additional dist
+dist_Prod
+dist_Dev

@@ -18,9 +18,8 @@
       <component :is="getComponent" @updateService="updateService" class="service-component mx-auto pt-3" />
     </div>
 
-    <!-- dev tool -->
-    <div v-if="devMode" class="btn-group ms-3" role="group" aria-label="Basic example">
-
+    <div v-if="1" class="btn-group ms-3">
+    <!-- this is devtool. for offline demo, manually turn on it --> 
       <button 
         v-for="(item, index) in 6" 
         :key="index" 
@@ -57,7 +56,6 @@
     },
     data() {
       return {
-        devMode: process.env.NODE_ENV == "development",
         urlParams: {
           status: 0,
         }
@@ -99,7 +97,11 @@
     },
     mounted() {
       // 取得麥克風權限, 授予權限後檢查是否有對應裝置 (檢查是否有麥克風)
-      functionUtil.requestPermission( functionUtil.checkMicrophone )
+      // PROD: 正常流程, DEV為離線使用, 僅展示頁面不檢查裝置
+      if(process.env.NODE_ENV == "production"){
+        functionUtil.requestPermission( functionUtil.checkMicrophone )
+      }
+      
     }
   }
 </script>
